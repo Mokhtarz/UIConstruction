@@ -9,10 +9,19 @@
 import UIKit
 
 class ChooseViewController: UIViewController {
-
+    
+    var appDelegate:AppDelegate!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
+        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.layoutSettings.backgroundColor()
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +29,7 @@ class ChooseViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
